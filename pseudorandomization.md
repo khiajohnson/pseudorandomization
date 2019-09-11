@@ -7,14 +7,12 @@ This notebook walks you through generating pseudorandomized stimuli lists with s
 
 To use this code, follow the instructions as indicated and run each cell once. The output will be a number of csv files with pseudorandomized order, evenly split between two versions differing in which key response is the correct response. 
 
-
 ```python
 import pandas as pd
 import random
 ```
 
 **Import, inspect, and reformat your data**
-
 
 ```python
 # Replace the value with the path to your data (csv or excel file)
@@ -30,23 +28,6 @@ else:
 stimuli.head(n=3)
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -87,9 +68,6 @@ stimuli.head(n=3)
 </table>
 </div>
 
-
-
-
 ```python
 # Rename columns here
 stimuli.rename(columns={'item':'item',
@@ -105,23 +83,6 @@ stimuli = stimuli[['item','group','word']]
 stimuli.sample(n=3)
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -154,10 +115,7 @@ stimuli.sample(n=3)
 </table>
 </div>
 
-
-
 **Set your variables for pseudorandomization here**
-
 
 ```python
 # number of filler items at the beginning
@@ -184,7 +142,6 @@ base = 'pseudrand'
 ```
 
 **The following cell contains functions needed for pseudorandomization. Don't change anything here, just run the cell!**
-
 
 ```python
 # pseudorandomizes a pandas dataframe
@@ -219,7 +176,6 @@ def set_cresp_v2(row):
 ```
 
 **Double check that you have the right settings. You can rereun any cells that you need to make revisions in.**
-
 
 ```python
 for i in range(int(number_of_lists/2)):
