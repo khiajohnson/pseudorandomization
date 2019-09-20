@@ -1,2 +1,2 @@
 # pseudorandomization
-Pseudorandomization code in a few different formats. The notebook is the easiest to use upon download, and the markdown is the easiest to read. 
+Pseudorandomization code in a python notebook. There are options to set the number of fillers at the beginning, and the minimum number of fillers between targets. 
